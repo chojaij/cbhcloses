@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carolina | CBH Closes — High-Ticket Remote Closer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,500&family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2E241F;
+    --ink-2:#3B2E27;
+    --paper:#F8F6EF;
+    --paper-dim:#EFEAE0;
+    --accent:#7A2530;
+    --accent-bright:#9E3648;
+    --stamp:#3B2E27;
+    --slate:#6B5D52;
+    --line: rgba(46,36,31,0.16);
+    --display: 'Space Grotesk', sans-serif;
+    --body: 'IBM Plex Sans', sans-serif;
+    --mono: 'IBM Plex Mono', monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--paper); color:var(--ink); font-family:var(--body); line-height:1.5; overflow-x:hidden;}
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 32px;}
+  ::selection{background:var(--accent); color:var(--ink);}
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important;}
+  }
+
+  /* ---------- NAV ---------- */
+  header{position:fixed; top:0; left:0; right:0; z-index:50; background:rgba(248,246,239,0.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
+  nav.wrap{display:flex; align-items:center; justify-content:space-between; height:76px;}
+  .brand{font-family:var(--display); font-weight:600; font-size:1.15rem; display:flex; align-items:center; gap:10px;}
+  .brand .mark{width:28px;height:28px;border:1.5px solid var(--accent); border-radius:50%; display:flex;align-items:center;justify-content:center; font-family:var(--mono); font-size:0.62rem; color:var(--accent);}
+  .navlinks{display:flex; gap:36px; font-size:0.92rem; color:var(--slate);}
+  .navlinks a:hover{color:var(--accent-bright);}
+  .nav-cta{font-family:var(--mono); font-size:0.8rem; border:1px solid var(--accent); color:var(--accent-bright); padding:9px 18px; border-radius:2px; transition:background .2s ease, color .2s ease;}
+  .nav-cta:hover{background:var(--accent); color:var(--paper);}
+  @media (max-width:840px){ .navlinks{display:none;} }
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative; padding:140px 0 60px; background:radial-gradient(ellipse at 15% 0%, rgba(122,37,48,0.08), transparent 55%), var(--paper); overflow:hidden;}
+  .hero::before{content:""; position:absolute; inset:0; background-image:repeating-linear-gradient(0deg, rgba(46,36,31,0.035) 0px, rgba(46,36,31,0.035) 1px, transparent 1px, transparent 42px); pointer-events:none;}
+  .hero-grid{display:grid; grid-template-columns:1.2fr 0.9fr; gap:44px; align-items:center; position:relative; z-index:1;}
+  .eyebrow{font-family:var(--mono); font-size:0.78rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent); display:flex; align-items:center; gap:10px; margin-bottom:18px;}
+  .eyebrow::before{content:"§"; color:var(--stamp);}
+  .hero-tag{font-family:var(--display); font-weight:700; font-size:clamp(1.1rem, 2.4vw, 1.5rem); letter-spacing:0.005em; color:var(--accent); display:flex; align-items:center; gap:10px; margin-bottom:20px;}
+  .hero-tag::before{content:"§"; color:var(--stamp); font-family:var(--mono); font-size:0.8em;}
+  .name-display{font-family:var(--display); font-weight:700; text-transform:uppercase; font-size:clamp(2.8rem, 7.2vw, 4.8rem); line-height:0.94; letter-spacing:-0.01em; margin-bottom:18px; color:var(--ink);}
+  h1{font-family:'Fraunces', serif; font-style:italic; font-weight:500; font-size:clamp(1.3rem, 2.4vw, 1.75rem); line-height:1.3; letter-spacing:-0.005em; margin-bottom:20px; color:var(--ink); max-width:42ch;}
+  h1 em{font-style:italic; font-weight:600; color:var(--accent);}
+  .hero p.lede{font-size:1.08rem; color:var(--slate); max-width:48ch; margin-bottom:34px;}
+  .hero-actions{display:flex; gap:16px; flex-wrap:wrap; align-items:center;}
+  .btn-primary{font-family:var(--mono); font-size:0.85rem; letter-spacing:0.02em; background:var(--accent); color:var(--paper); font-weight:600; padding:15px 26px; border-radius:2px; transition:transform .18s ease, background .18s ease; display:inline-block;}
+  .btn-primary:hover{background:var(--accent-bright); transform:translateY(-1px);}
+  .btn-ghost{font-family:var(--mono); font-size:0.85rem; color:var(--ink); padding:15px 8px; border-bottom:1px solid var(--slate);}
+  .btn-ghost:hover{border-color:var(--accent-bright); color:var(--accent-bright);}
+
+  /* photo frame */
+  .photo-frame{
+    position:relative; aspect-ratio:4/5; border:1px solid var(--line); border-radius:3px;
+    background:var(--paper-dim); display:flex; align-items:center; justify-content:center;
+    overflow:hidden;
+  }
+  .photo-frame .placeholder-text{
+    font-family:var(--mono); font-size:0.75rem; color:#6b5d52; text-align:center; padding:20px; letter-spacing:0.04em;
+  }
+  .photo-frame::after{
+    content:"CLOSED"; position:absolute; bottom:16px; right:16px;
+    font-family:var(--mono); font-size:0.6rem; letter-spacing:0.12em; color:var(--stamp);
+    border:1px solid var(--stamp); padding:3px 7px; border-radius:2px; transform:rotate(6deg); opacity:0.8;
+  }
+
+  section{padding:72px 0;}
+  .section-head{max-width:640px; margin-bottom:36px;}
+  .section-head .eyebrow{margin-bottom:16px;}
+  .section-head h2{font-family:var(--display); font-weight:600; font-size:clamp(1.9rem, 3vw, 2.6rem); line-height:1.12; margin-bottom:16px;}
+  .section-head p{color:var(--slate); font-size:1.02rem;}
+
+  /* ---------- TRAINING & EXPERIENCE ---------- */
+  .training{background:var(--paper);}
+  .training .eyebrow{color:var(--stamp);} .training .eyebrow::before{color:var(--stamp);}
+  .training-grid{display:grid; grid-template-columns:1.2fr 0.8fr; gap:44px; align-items:start;}
+  .stats-col{display:flex; flex-direction:column; gap:16px; align-items:center; padding-top:8px;}
+  .stat-circle{
+    width:140px; height:140px; border-radius:50%; background:var(--ink);
+    display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:16px;
+    flex-shrink:0;
+  }
+  .stat-circle .num{font-family:var(--display); font-weight:700; font-size:1.5rem; color:var(--paper); line-height:1.1; margin-bottom:6px;}
+  .stat-circle .label{font-family:var(--body); font-weight:500; font-size:0.68rem; color:var(--paper); opacity:0.85; text-transform:uppercase; letter-spacing:0.05em; line-height:1.3;}
+  @media (max-width:800px){ .training-grid{grid-template-columns:1fr;} .stats-col{flex-direction:row; flex-wrap:wrap; justify-content:center;} }
+  .training h2{font-family:var(--display); font-weight:700; font-size:clamp(1.7rem,2.8vw,2.3rem); margin-bottom:24px; color:var(--ink);}
+  .training ul{list-style:none;}
+  .training li{font-size:0.98rem; color:#2c221c; padding:9px 0 9px 26px; position:relative; border-bottom:1px solid rgba(46,36,31,0.1);}
+  .training li::before{content:"✓"; position:absolute; left:0; color:var(--accent); font-weight:700;}
+  @media (max-width:800px){ .training-grid{grid-template-columns:1fr;} }
+
+  /* video thumbnail with split caption + play button */
+  .video-callout{
+    position:relative; margin-top:32px; border-radius:3px; overflow:hidden; border:1px solid var(--line);
+    background:
+      radial-gradient(ellipse at 50% 40%, rgba(122,37,48,0.16), transparent 65%),
+      linear-gradient(160deg, var(--ink) 0%, var(--ink-2) 100%);
+    aspect-ratio:16/9; display:flex; align-items:center; justify-content:center;
+    text-decoration:none; transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .video-callout:hover{transform:translateY(-2px); box-shadow:0 12px 32px rgba(46,36,31,0.18);}
+  .video-callout .cap{display:flex; flex-direction:column; align-items:center; justify-content:center; gap:24px; text-align:center; padding:20px;}
+  .video-callout .cap-line{
+    font-family:var(--display); font-weight:700; text-transform:uppercase;
+    font-size:clamp(1.6rem,4.2vw,2.8rem); color:var(--paper); line-height:1.1; max-width:16ch; letter-spacing:0.01em;
+  }
+  .video-callout .cap-line.accent{color:var(--accent-bright);}
+  .video-callout .play-circle{
+    width:100px; height:100px; border-radius:50%; border:3px solid var(--accent-bright);
+    background:rgba(248,246,239,0.08);
+    display:flex; align-items:center; justify-content:center; color:var(--accent-bright); font-size:2.1rem;
+  }
+
+  /* ---------- FIT SECTION ---------- */
+  .fit{background:var(--ink-2); color:var(--paper); text-align:center; padding:52px 0;}
+  .fit-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:30px;}
+  .fit-card{padding:0 10px;}
+  .fit-card .emoji{font-size:1.6rem; display:block; margin-bottom:12px;}
+  .fit-card p{font-family:var(--display); font-weight:600; font-size:1.02rem; line-height:1.4; color:var(--paper);}
+  @media (max-width:800px){ .fit-grid{grid-template-columns:1fr; gap:26px;} }
+
+  /* ---------- BOOKING CARD ---------- */
+  .book-card{
+    margin-top:8px; border:1px solid var(--line); border-radius:4px; background:var(--paper-dim);
+    padding:36px 32px; text-align:center;
+  }
+  .book-card h2{font-family:var(--display); font-weight:600; font-size:clamp(1.8rem,3vw,2.4rem); margin-bottom:16px;}
+  .book-card p{color:var(--slate); max-width:44ch; margin:0 auto 30px;}
+
+  /* ---------- CTA ---------- */
+  .cta{text-align:center; background:radial-gradient(ellipse at 50% 0%, rgba(122,37,48,0.10), transparent 60%), var(--paper);}
+  .cta h2{font-family:var(--display); font-weight:600; font-size:clamp(2rem,4vw,3rem); margin-bottom:20px; max-width:18ch; margin-inline:auto;}
+  .cta p{color:var(--slate); max-width:44ch; margin:0 auto 36px;}
+
+  footer{border-top:1px solid var(--line); padding:50px 0; background:var(--paper);}
+  .foot-grid{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;}
+  footer .brand{font-size:1rem;}
+  .foot-links{display:flex; gap:26px; font-family:var(--mono); font-size:0.82rem; color:var(--slate);}
+  .foot-links a:hover{color:var(--accent-bright);}
+  .foot-note{font-family:var(--mono); font-size:0.72rem; color:#6b5d52; margin-top:26px;}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="brand"><span class="mark">§</span> CBH&nbsp;CLOSES</div>
+    <div class="navlinks">
+      <a href="#training">Training</a>
+      <a href="#fit">Good Fit</a>
+    </div>
+    <a href="#book" class="nav-cta">Book a Call →</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="hero-tag">High Ticket Closer</div>
+      <div class="name-display">Carolina Hojaij</div>
+      <h1>10+ years of closing deals. Now doing it <em>remotely.</em></h1>
+      <p class="lede" style="margin-bottom:26px;">Helping businesses, coaches, and missions sell offers that create real transformation for clients through high-converting conversations.</p>
+      <div class="hero-actions">
+        <a href="#book" class="btn-primary">Chat with Me →</a>
+      </div>
+    </div>
+    <div class="photo-frame">
+      <!-- Replace this div with: <img src="your-photo.jpg" alt="Carolina"> -->
+      <div class="placeholder-text">[ Your photo goes here ]<br>Recommend a clean, confident<br>headshot, 4:5 ratio</div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" style="padding:0 32px;">
+  <a href="https://www.loom.com/share/a056ba0792e94fab8f09239ef284e862" target="_blank" rel="noopener" class="video-callout">
+    <div class="cap">
+      <div class="cap-line">Your offer deserves a closer</div>
+      <div class="play-circle">▶</div>
+      <div class="cap-line accent">who can actually close it</div>
+    </div>
+  </a>
+</section>
+
+
+
+<section class="training" id="training">
+  <div class="wrap training-grid">
+    <div>
+      <h2>Training &amp; Relevant Experience</h2>
+      <ul>
+        <li>10+ years of sales and client engagement experience across luxury retail and nonprofit fundraising — connecting people with products and opportunities that genuinely solve their problems</li>
+        <li>Personally closed $5M+ in nonprofit gifts over 5 years, and $1M+ in luxury retail in a single year — 186% of goal</li>
+        <li>Certified She Sells Remote Closer, trained by Shelby Sapp</li>
+        <li>Trained and experienced in discovery calls, elegant and effective pitching, objection handling, and follow-up</li>
+        <li>Worked for brands like Bloomingdale's, Lululemon, and St. John's University</li>
+        <li>MBA in Executive Management &amp; Marketing Management</li>
+      </ul>
+    </div>
+    <div class="stats-col">
+      <div class="stat-circle"><span class="num">$6.23M</span><span class="label">Revenue Generated</span></div>
+      <div class="stat-circle"><span class="num">3</span><span class="label">Niches</span></div>
+      <div class="stat-circle"><span class="num">#1</span><span class="label">Performing Closer</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="fit" id="fit">
+  <div class="wrap">
+    <h2 style="text-align:center; color:var(--paper); max-width:none; font-size:clamp(1.5rem,2.6vw,2rem); margin-bottom:8px;">We'll be a great match if</h2>
+    <div class="fit-grid">
+      <div class="fit-card">
+        <span class="emoji">✨</span>
+        <p>Your offer creates real transformation, not just a transaction</p>
+      </div>
+      <div class="fit-card">
+        <span class="emoji">🎯</span>
+        <p>You're looking for a closer who genuinely believes and can sell your mission, not just a script-reader</p>
+      </div>
+      <div class="fit-card">
+        <span class="emoji">🚀</span>
+        <p>You want to scale your impact and revenue with a dedicated, remote sales partner</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="book">
+  <div class="wrap">
+    <div class="book-card">
+      <h2>1:1 Chat with Me</h2>
+      <p>Book a 20-minute call to see if we're a fit to work together.</p>
+      <!-- CALENDLY EMBED: paste your real link below, then uncomment the widget div + script.
+           This embed won't render in this chat preview (only cdnjs.cloudflare.com scripts load here),
+           but it will work correctly once this file is hosted live (Netlify, Vercel, etc). -->
+      <!--
+      <div class="calendly-inline-widget" data-url="https://calendly.com/your-link" style="min-width:280px; height:650px; margin-top:8px;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      -->
+      <a href="https://calendly.com/your-link" class="btn-primary" style="margin-top:8px;">Let's Talk →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="brand"><span class="mark">§</span> CBH&nbsp;CLOSES</div>
+      <div class="foot-links">
+        <a href="mailto:chojaij@gmail.com">chojaij@gmail.com</a>
+        <a href="https://www.linkedin.com/in/chojaij/?skipRedirect=true">LinkedIn</a>
+      </div>
+    </div>
+    <div class="foot-note">© 2026 CBH Closes. Replace photo and Calendly link before launch.</div>
+  </div>
+</footer>
+
+</body>
+</html>
