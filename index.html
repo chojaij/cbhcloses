@@ -193,10 +193,7 @@
 <script>
   (function(){
     var overlay = document.getElementById('capOverlay');
-    var frame = document.getElementById('loomFrame');
     overlay.addEventListener('click', function(){
-      var base = frame.src.split('?')[0];
-      frame.src = base + '?autoplay=1';
       overlay.style.opacity = '0';
       overlay.style.pointerEvents = 'none';
     });
