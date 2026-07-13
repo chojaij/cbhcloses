@@ -154,6 +154,23 @@
   .book-card h2{font-family:var(--display); font-weight:600; font-size:clamp(1.8rem,3vw,2.4rem); margin-bottom:16px;}
   .book-card p{color:var(--slate); max-width:44ch; margin:0 auto 30px;}
 
+  /* ---------- CONTACT FORM ---------- */
+  .contact-section{background:var(--paper);}
+  .contact-form{max-width:640px; margin:0 auto; display:flex; flex-direction:column; gap:16px;}
+  .contact-form .form-row{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  .contact-form input, .contact-form textarea{
+    width:100%; padding:14px 16px; border:1px solid var(--line); border-radius:3px;
+    background:var(--paper-dim); font-family:var(--body); font-size:0.95rem; color:var(--ink);
+  }
+  .contact-form input::placeholder, .contact-form textarea::placeholder{color:var(--slate);}
+  .contact-form input:focus, .contact-form textarea:focus{outline:none; border-color:var(--accent);}
+  .contact-form textarea{resize:vertical; min-height:110px;}
+  .contact-form button{align-self:center; margin-top:8px; border:none; cursor:pointer;}
+  @media (max-width:600px){ .contact-form .form-row{grid-template-columns:1fr;} }
+  .form-success{color:var(--accent); font-weight:600; text-align:center; margin-bottom:8px;}
+  .form-error{color:var(--stamp); text-align:center; margin-bottom:8px;}
+  .field-error{color:var(--stamp); font-size:0.8rem; margin-top:-8px;}
+
   /* ---------- CTA ---------- */
   .cta{text-align:center; background:radial-gradient(ellipse at 50% 0%, rgba(122,37,48,0.10), transparent 60%), var(--paper);}
   .cta h2{font-family:var(--display); font-weight:600; font-size:clamp(2rem,4vw,3rem); margin-bottom:20px; max-width:18ch; margin-inline:auto;}
@@ -184,7 +201,7 @@
       <h1>Million-Dollar Closer. Obsessed with turning conversations into <em>$$$.</em></h1>
       <p class="lede" style="margin-bottom:26px;">Helping business owners, coaches, and missions sell offers that create real transformation, scale their business, and drive serious revenue.</p>
       <div class="hero-actions">
-        <a href="#book" class="btn-primary">Chat with Me →</a>
+        <a href="#contact" class="btn-primary">Get in Touch →</a>
       </div>
     </div>
     <div class="photo-frame">
@@ -253,6 +270,36 @@
     </div>
   </div>
 </section>
+
+<section class="contact-section" id="contact">
+  <div class="wrap">
+    <div class="section-head" style="text-align:center; max-width:none; margin:0 auto 36px;">
+      <h2 style="text-align:center;">Get in Touch</h2>
+      <p style="text-align:center;">Tell me a bit about your business and I'll follow up personally.</p>
+    </div>
+    <div class="form-success" data-fs-success></div>
+    <div class="form-error" data-fs-error></div>
+    <form class="contact-form" id="contactForm">
+      <div class="form-row">
+        <input type="text" name="first_name" placeholder="First Name" data-fs-field required>
+        <input type="text" name="last_name" placeholder="Last Name" data-fs-field required>
+      </div>
+      <input type="email" name="email" placeholder="Email" data-fs-field required>
+      <span class="field-error" data-fs-error="email"></span>
+      <div class="form-row">
+        <input type="text" name="company" placeholder="Company Name" data-fs-field>
+        <input type="url" name="website" placeholder="Website" data-fs-field>
+      </div>
+      <textarea name="message" placeholder="Who you are and what you're looking for in a closer" data-fs-field></textarea>
+      <button type="submit" class="btn-primary" data-fs-submit-btn>Send →</button>
+    </form>
+  </div>
+</section>
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#contactForm', formId: 'xzdnbkyq' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 <section class="cta" id="book">
   <div class="wrap">
