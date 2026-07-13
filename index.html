@@ -128,13 +128,14 @@
   }
   .video-callout .cap-line{
     font-family:var(--display); font-weight:800; text-transform:uppercase;
-    font-size:clamp(1.9rem,5.6vw,3.6rem); color:var(--paper); line-height:1.05; max-width:18ch;
+    font-size:clamp(1.9rem,5.6vw,3.9rem); color:var(--paper); line-height:1.05; max-width:18ch;
     text-align:center; text-shadow:0 3px 16px rgba(0,0,0,0.7);
   }
   .video-callout .cap-line .accent{color:var(--accent-bright);}
-  @media (max-width:700px){ .video-callout .cap-overlay{gap:140px;} }
+  @media (max-width:700px){ .video-callout .cap-overlay{gap:140px;} .video-callout .cap-line{font-size:1.5rem;} }
   @media (max-width:480px){
     .video-callout .cap-overlay{gap:100px; padding:16px;}
+    .video-callout .cap-line{font-size:1.15rem;}
   }
 
   /* ---------- FIT SECTION ---------- */
