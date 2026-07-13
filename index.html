@@ -151,7 +151,7 @@
     margin-top:8px; border:1px solid var(--line); border-radius:4px; background:var(--paper-dim);
     padding:36px 32px; text-align:center;
   }
-  .book-card h2{font-family:var(--display); font-weight:600; font-size:clamp(1.8rem,3vw,2.4rem); margin-bottom:16px;}
+  .book-card h2{font-family:var(--display); font-weight:600; font-size:clamp(1.9rem, 3vw, 2.6rem); margin-bottom:16px;}
   .book-card p{color:var(--slate); max-width:44ch; margin:0 auto 30px;}
 
   /* ---------- CONTACT FORM ---------- */
@@ -288,24 +288,15 @@
       <span class="field-error" data-fs-error="email"></span>
       <div class="form-row">
         <input type="text" name="company" placeholder="Company Name" data-fs-field>
-        <input type="url" name="website" placeholder="Website" data-fs-field>
+        <input type="text" name="website" placeholder="Website" data-fs-field>
       </div>
       <textarea name="message" placeholder="Who you are and what you're looking for in a closer" data-fs-field></textarea>
       <button type="submit" class="btn-primary" data-fs-submit-btn>Send →</button>
     </form>
-  </div>
-</section>
-<script>
-  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-  formspree('initForm', { formElement: '#contactForm', formId: 'xzdnbkyq' });
-</script>
-<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
-<section class="cta" id="book">
-  <div class="wrap">
-    <div class="book-card">
-      <h2>1:1 Chat with Me</h2>
-      <p>Book a 20-minute call to see if we're a fit to work together.</p>
+    <div class="book-card" style="margin-top:64px;">
+      <h2 style="text-align:center;">1:1 Chat with Me</h2>
+      <p>Prefer to just grab time on my calendar? Book a 20-minute call below.</p>
       <!-- Calendly inline widget begin -->
       <div class="calendly-inline-widget" data-url="https://calendly.com/chojaij/30min?text_color=7a2530&primary_color=3b2e27" style="width:100%; max-width:480px; min-width:0; height:630px; margin:0 auto;"></div>
       <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
@@ -313,6 +304,11 @@
     </div>
   </div>
 </section>
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#contactForm', formId: 'xzdnbkyq' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 <footer>
   <div class="wrap">
